@@ -1,3 +1,5 @@
+using MiddleWarePractice.Middlewares;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -28,6 +30,8 @@ app.MapControllers();
 // app.Run( async context => {
 //     await context.Response.WriteAsync("Response da ki yazı benim swagger'dan izle beni !");
 // });
+
+app.UseHello();
 
 app.Use(async (context,next) => {
     
